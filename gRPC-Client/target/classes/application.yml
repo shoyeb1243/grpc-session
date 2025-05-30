@@ -1,0 +1,9 @@
+spring:
+  application:
+  name: gRPC-Client
+
+grpc:
+  client:
+    book-service:
+      address: 'static://localhost:9090'
+      negotiationType: plaintext

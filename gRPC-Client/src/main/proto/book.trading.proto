@@ -1,0 +1,21 @@
+syntax="proto3";
+
+package com.shoyeb;
+option java_multiple_files=true;
+option java_package = "com.shoyeb";
+option java_outer_classname = "BookProto";
+
+service BookService {
+  rpc findBookByTitle (BookRequest) returns (BookResponse);
+}
+
+message BookRequest {
+  string bookTitle = 1;
+}
+
+message BookResponse {
+  int64 bookId = 1;
+  string bookTitle = 2;
+  string author = 3;
+  double bookPrice = 4;
+}
